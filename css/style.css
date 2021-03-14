@@ -171,7 +171,7 @@ section p {
     transition: all .5s ease;
 }
 
-.menu div{
+.menu div{  
     width: 50%;
 }
 .menu ul{
@@ -205,6 +205,22 @@ section p {
     z-index: 120;
 }
 
+@media (max-width: 1150px) { 
+    .menu .empty-div {
+        display: none;
+    }
+    .menu .nav-list {
+        width: 100%;
+        padding: 10vh 5vw;
+    }
+    .menu ul {
+        transform: rotate(0);
+    }
+    .menu a {
+        font-size: 32px;
+    }
+}
+
 /* Header */
 
 .welcome h1 span{
@@ -229,22 +245,36 @@ section p {
     margin-left: 100px;
 }
 
+
+
+
 .cta{
     background-color:#F45B69;
     width: 120px;
-     height: 50px;
-     border: none;
-     box-sizing: border-box;
-     margin-left: calc(50% - 50px);
-     border-radius: 5%;
-     color: #ffff;
-     cursor: pointer;
-     transition: all .3s ease;
+    height: 50px;
+    border: none;
+    box-sizing: border-box;
+    margin-left: calc(50% - 50px);
+    border-radius: 5%;
+    color: #ffff;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
 .cta:hover{
     background:#456990 ;
+}
 
+@media (max-width: 600px) {
+    .welcome .itakhi, .welcome .digital, .welcome .taller {
+        font-size: 48px;
+    }
+    .welcome .taller {
+        margin-left: 45px;
+    }
+    .welcome .itakhi {
+        margin: 15vh 0;
+    }
 }
 /* About us */
 
@@ -381,6 +411,34 @@ section p {
 .photo2 img {
     transform: translateY(-50px);
 }
+
+@media (max-width: 820px) {
+    .about-us {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 100px;
+    }
+    .about-us .leftside, .about-us .rightside {
+        width: 100vw;
+    }
+    .about-us .leftside {
+        height: 30vw;
+    }
+    .about-us .rightside {
+        padding: 0 5vw;
+    }
+    .about-us .leftside h3 {
+        transform: rotate(0);
+        font-size: 32px;
+        margin: 10vw;
+        width: 100%;
+    }
+    .about-us .leftside h3:after {
+        width: 100%;
+    }
+}
+
+
 /* Works section */
 
 .work{
