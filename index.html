@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel= "stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer src="./js/javascript.js"></script>
     <title>Itakhi - Taller digital</title>
 </head>
 <body>
-
+    
     <!-- Nav -->
     <nav id="nav">
         <div class= "logo"> 
@@ -78,8 +82,22 @@
                 </div>
 
                 <div class="rightside">
-                   <div class="photo1 photo"> <img src="./images/javier.jpg" alt="Sabri Polanco"></div>
-                   <div class="photo2 photo"> <img src="./images/sabri.jpeg" alt="Javier Lopez Montoya"> </div>
+                    <a data-toggle="collapse" href="#javier-info" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="photo1 photo"> 
+                            <img src="./images/javier.jpg" alt="Javier Lopez Montoya">
+                        </div>
+                    </a>
+                    <a data-toggle="collapse" href="#sabri-info" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="photo2 photo">
+                            <img src="./images/sabri.jpeg" alt="Sabri Polanco"> 
+                        </div>
+                    </a>
+                    <div id="javier-info">
+                        <p><span>Javier Lopez Montoya</span><br/>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium iusto amet odit pariatur labore, similique quae.</p>
+                    </div>
+                    <div id="sabri-info">
+                        <p><span>Sabri Polanco Ferreyra</span><br/>Natus enim quisquam voluptatem, magni repudiandae nam architecto suscipit consectetur exercitationem facere aliquid voluptates.</p>
+                    </div>
                 </div>
             </section>
             <!-- Work section  -->
@@ -143,8 +161,29 @@
                     <input type="text" name="nombre" placeholder="Nombre" class="name-input"> 
                     <input type="email" name="email" placeholder="Email" class="email-input" > 
                     <textarea placeholder="Contanos como podemos ayudarte" name="mensaje" class="text-input" rows="3"></textarea> 
-                    <button type="submit" class="cta submit-btn">Enviar</button>            
+                    <button type="button" class="cta submit-btn" data-toggle="modal" data-target="#confirmation-modal">Enviar</button>            
                 </form>
+
+                <div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="confirmationModal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h6 class="modal-title" id="exampleModalLabel">Confirmación</h6>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Querés enviarnos este mensaje?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
             </section>
             
             <!-- Footer -->
