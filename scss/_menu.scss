@@ -1,0 +1,60 @@
+/* Menu escondido */
+
+.menu {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $green;
+    z-index: 80;
+    transition: all .5s ease;
+    div{  
+        width: 50%;
+    }
+    ul{
+        transform: rotate(-90deg) translateX(-85vh);
+        transform-origin: top left;
+        li{
+            margin: 80px 0;
+            a{
+                color: $yellow;
+                font-size: 4rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .exit{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px!important;
+        height: 40px;
+        background-color: $red;
+        color: white;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        top: 80px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 120;
+    }
+    @media (max-width: 1150px) { 
+        .empty-div {
+            display: none;
+        }
+        .nav-list {
+            width: 100%;
+            padding: 10vh 5vw;
+            ul {
+                transform: rotate(0);
+                a {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+

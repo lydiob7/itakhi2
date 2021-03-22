@@ -1,0 +1,42 @@
+@keyframes appear {
+    from {
+        transform: translateY(7rem);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-300vh);
+    } to {
+        transform: rotate(17deg);  
+    }
+}
+@keyframes fall2 {
+    from {
+        transform: translateY(-200vh);
+    } to {
+        transform: rotate(-17deg);  
+    }
+}
+@keyframes fall3 {
+    from {
+        transform: translateY(-100vh);
+    } to {
+        transform: rotate(5deg);  
+    }
+}
+
+@keyframes circle-animation {
+    0% {
+        transform: scale(1);
+        opacity: .3;
+    } 50% {
+        transform: scale(.8);
+        opacity: .15;
+    } 100% {
+        transform: scale(1);
+        opacity: .3;
+    }
+}

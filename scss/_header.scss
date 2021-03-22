@@ -1,0 +1,41 @@
+/* Header */
+
+.header{
+    background-color: $yellow;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 90px;
+    .welcome h1 span{
+        display: block;
+        color: $green;
+        text-align: center;
+        width: 100%;
+    }
+    .itakhi{
+        font-size: 144px;
+        color: $purple;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    
+    .taller, .digital{
+        font-size: 96px;
+    }
+    .taller{
+        margin-left: 100px;
+    }   
+    @media (max-width: 600px) {
+        .welcome {
+            .itakhi, .digital, .taller {
+                font-size: 48px;
+            }
+            .taller {
+                margin-left: 45px;
+            }
+            .itakhi {
+                margin: 15vh 0;
+            }
+        }
+    }
+}
