@@ -30,12 +30,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px!important;
-        height: 40px;
+        width: 80px!important;
+        height: 80px;
         background-color: $red;
-        color: white;
+        text-transform: uppercase;
         border-radius: 50%;
-        font-size: 1.4rem;
+        font-size: .8rem;
         top: 80px;
         right: 40px;
         cursor: pointer;

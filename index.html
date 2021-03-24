@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel= "stylesheet" href="./css/main.css">
@@ -39,7 +40,7 @@
                 <li><a href="#work-together">work together</a> </li>
                 <li><a href="#contact">Contact</a> </li>
             </ul>
-            <div class="exit" id="exit">X</div>
+            <div class="exit" id="exit">Close</div>
         </div>
     </div>
 
@@ -50,13 +51,17 @@
 
             <!-- Header section -->
         
-            <header class= "header">            
+            <header class= "header">
+                <div class="social-media">
+                    <i class="fab fa-behance"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>       
                 <div class="welcome">
-                    <h1 class="itakhi">Itakhi
-                        <span class="taller"> 
-                    Taller</span> <span class="digital">Digital</span></h1> 
-                    <a href="#contact"><button class="cta">ESCRIBINOS</button></a>
+                    <h1 class="title">Itakhi</h1>
+                    <h2>Digital Atelier</h2>
+                    <img src="./images/arrow-left.png" alt="Arrow Left">
                 </div>
+                <div class="bg-right-side"></div>
             </header>
 
              <!-- About us section  -->
@@ -82,22 +87,14 @@
                 </div>
 
                 <div class="rightside">
-                    <a data-toggle="collapse" href="#javier-info" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <div class="photo1 photo"> 
-                            <img src="./images/javier.jpg" alt="Javier Lopez Montoya">
-                        </div>
-                    </a>
-                    <a data-toggle="collapse" href="#sabri-info" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <div class="photo2 photo">
-                            <img src="./images/sabri.jpeg" alt="Sabri Polanco"> 
-                        </div>
-                    </a>
-                    <div class="collapse" id="javier-info">
-                        <p><span>Javier Lopez Montoya</span><br/>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium iusto amet odit pariatur labore, similique quae.</p>
+                    <div class="photo1 photo"> 
+                        <img src="./images/javier.jpg" alt="Javier Lopez Montoya">
+                        <a href="#">Javier Lopez Montoya<br/><span>Portfolio</span></a>
                     </div>
-                    <div class="collapse" id="sabri-info">
-                        <p><span>Sabri Polanco Ferreyra</span><br/>Natus enim quisquam voluptatem, magni repudiandae nam architecto suscipit consectetur exercitationem facere aliquid voluptates.</p>
-                    </div>
+                    <div class="photo2 photo">
+                        <img src="./images/sabri.jpeg" alt="Sabri Polanco"> 
+                        <a href="#">Sabrina Polanco Ferreyra<br/><span>Portfolio</span></a>
+                    </div>                
                 </div>
             </section>
             <!-- Work section  -->
@@ -108,10 +105,10 @@
                     <p> We work with brands of all shapes and sizes, but our favourites are hose that think differently and wanna meke an impact.</p>
                     <p>Is that you?</p>
                     </div>
-                    <div class="circles-animation">
-                        <div class="circle1"></div>
-                        <div class="circle2"></div>
-                        <div class="circle3"></div>
+                    <div class="circles">
+                        <div class="circle circle-large"></div>
+                        <div class="circle circle-small"></div>
+                        <div class="circle circle-medium"></div>
                     </div>
                 </div>
         
@@ -155,13 +152,12 @@
 
             <!-- contact section -->
             <section class="contact" id="contact">
-                <h5>EN ESTE FORMULALRIO PODES ESCRIBIRNOS Y PREGUNTARNOS SOBRE NUESTROS SERVICIOS.
-                </h5>
+                <h5>GET IN TOUCH</h5>
                 <form class="form">
-                    <input type="text" name="nombre" placeholder="Nombre" class="name-input"> 
+                    <input type="text" name="nombre" placeholder="Name" class="name-input"> 
                     <input type="email" name="email" placeholder="Email" class="email-input" > 
-                    <textarea placeholder="Contanos como podemos ayudarte" name="mensaje" class="text-input" rows="3"></textarea> 
-                    <button type="button" class="cta submit-btn" data-toggle="modal" data-target="#confirmation-modal">Enviar</button>            
+                    <textarea placeholder="For any enquiries, or just to say hello, get in touch and contact us." name="mensaje" class="text-input" rows="3"></textarea> 
+                    <button type="button" class="cta submit-btn" data-toggle="modal" data-target="#confirmation-modal">Submit</button>            
                 </form>
 
                 <div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="confirmationModal" aria-hidden="true">
@@ -215,10 +211,10 @@
                             <li><a href="#contact">Contact</a> </li>
                         </ul>
                     </div>
-                    <div class="circulos">
-                        <div class="circulo"></div>
-                        <div class="circulo"></div>
-                        <div class="circulo"></div>
+                    <div class="circles">
+                        <div class="circle circle-large"></div>
+                        <div class="circle circle-medium"></div>
+                        <div class="circle circle-small"></div>
                     </div>
                 </div>  
             </footer>

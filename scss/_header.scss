@@ -1,30 +1,55 @@
 /* Header */
 
 .header{
+    position: relative;
     background-color: $yellow;
     width: 100vw;
     height: 100vh;
     padding-top: 90px;
-    .welcome h1 span{
-        display: block;
-        color: $green;
-        text-align: center;
-        width: 100%;
+    .social-media {
+        position: absolute;
+        bottom: 5vh;
+        left: 30px;
+        display: flex;
+        flex-direction: column;
+        i {
+            font-size: 2rem;
+            margin-top: 2vh;
+        }
     }
-    .itakhi{
-        font-size: 144px;
-        color: $purple;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 15px;
+    .welcome {
+        position: absolute;
+        bottom: 10vh;
+        right: 7vw;
+        text-align: right;
+        z-index: 3;
+        .title {
+            line-height: .8;
+        }
+        img {
+            margin-top: 50px;
+        }
     }
-    
-    .taller, .digital{
-        font-size: 96px;
+    .bg-right-side {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+        width: 50vw;
+        background-color: $red;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 5vh;
+            left: -45vh;
+            z-index: 2;
+            background-color: $purple;
+            height: 90vh;
+            width: 90vh;
+            border-radius: 50%;
+        }
     }
-    .taller{
-        margin-left: 100px;
-    }   
     @media (max-width: 600px) {
         .welcome {
             .itakhi, .digital, .taller {

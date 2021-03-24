@@ -17,9 +17,13 @@ body {
     list-style: none; }
   body ul {
     padding: 0px; }
+  body h1 {
+    font-size: 10rem;
+    text-transform: uppercase; }
   body h2 {
-    font-size: 96px;
-    line-height: 96px; }
+    font-size: 2.5rem;
+    line-height: normal;
+    text-transform: uppercase; }
   body h3 {
     font-size: 64px;
     line-height: 64px;
@@ -174,12 +178,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px !important;
-    height: 40px;
+    width: 80px !important;
+    height: 80px;
     background-color: #F45B69;
-    color: white;
+    text-transform: uppercase;
     border-radius: 50%;
-    font-size: 1.4rem;
+    font-size: .8rem;
     top: 80px;
     right: 40px;
     cursor: pointer;
@@ -197,25 +201,48 @@ body {
 
 /* Header */
 .header {
+  position: relative;
   background-color: #E4FDE1;
   width: 100vw;
   height: 100vh;
   padding-top: 90px; }
-  .header .welcome h1 span {
-    display: block;
-    color: #028090;
-    text-align: center;
-    width: 100%; }
-  .header .itakhi {
-    font-size: 144px;
-    color: #456990;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 15px; }
-  .header .taller, .header .digital {
-    font-size: 96px; }
-  .header .taller {
-    margin-left: 100px; }
+  .header .social-media {
+    position: absolute;
+    bottom: 5vh;
+    left: 30px;
+    display: flex;
+    flex-direction: column; }
+    .header .social-media i {
+      font-size: 2rem;
+      margin-top: 2vh; }
+  .header .welcome {
+    position: absolute;
+    bottom: 10vh;
+    right: 7vw;
+    text-align: right;
+    z-index: 3; }
+    .header .welcome .title {
+      line-height: .8; }
+    .header .welcome img {
+      margin-top: 50px; }
+  .header .bg-right-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 50vw;
+    background-color: #F45B69; }
+    .header .bg-right-side:before {
+      content: '';
+      position: absolute;
+      top: 5vh;
+      left: -45vh;
+      z-index: 2;
+      background-color: #456990;
+      height: 90vh;
+      width: 90vh;
+      border-radius: 50%; }
   @media (max-width: 600px) {
     .header .welcome .itakhi, .header .welcome .digital, .header .welcome .taller {
       font-size: 48px; }
@@ -272,41 +299,38 @@ body {
       .about-us.about-us2 .rightside .photo img {
         max-width: 100%;
         object-fit: cover; }
-      .about-us.about-us2 .rightside .photo::before {
+      .about-us.about-us2 .rightside .photo a {
         position: absolute;
-        display: block;
-        padding: 0 2vw;
-        top: calc(50% - 1.5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
         font-size: 2rem;
         text-align: center;
-        cursor: pointer;
-        z-index: 10;
         opacity: 0;
-        transition: all .3s ease; }
-      .about-us.about-us2 .rightside .photo::after {
-        content: '';
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        opacity: 0;
-        transition: all .3s ease;
-        cursor: pointer; }
-      .about-us.about-us2 .rightside .photo:hover::after {
-        opacity: .4; }
-      .about-us.about-us2 .rightside .photo:hover::before {
-        opacity: 1; }
+        transition: all .2s linear; }
+        .about-us.about-us2 .rightside .photo a span {
+          font-size: 1rem; }
+          .about-us.about-us2 .rightside .photo a span:hover {
+            opacity: .7;
+            font-size: 1.1rem;
+            font-weight: bold; }
+      .about-us.about-us2 .rightside .photo:hover a {
+        opacity: 1;
+        text-decoration: none; }
       .about-us.about-us2 .rightside .photo.photo1 {
         background-color: #E4FDE1;
         bottom: 42vh;
         right: 40vw;
         z-index: 10; }
-        .about-us.about-us2 .rightside .photo.photo1::before {
-          content: 'Javier Lopez Montoya'; }
       .about-us.about-us2 .rightside .photo.photo2 {
         background-color: #456990;
         bottom: 10vh;
@@ -314,8 +338,6 @@ body {
         z-index: 11; }
         .about-us.about-us2 .rightside .photo.photo2 img {
           transform: translateY(-50px); }
-        .about-us.about-us2 .rightside .photo.photo2::before {
-          content: 'Sabri Polanco Ferreyra'; }
   .about-us.about-us2 #javier-info p, .about-us.about-us2 #sabri-info p {
     position: relative;
     width: 90%;
@@ -404,12 +426,27 @@ body {
     .work .leftside .text {
       height: 60vh;
       box-sizing: border-box; }
-    .work .leftside .circles-animation {
+    .work .leftside .circles {
       position: relative;
       width: 100%;
       height: 40vh;
       box-sizing: border-box; }
-      .work .leftside .circles-animation .circle1 {
+      .work .leftside .circles .circle-small {
+        background-color: #456990;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      .work .leftside .circles .circle-medium {
+        background-color: #028090;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      .work .leftside .circles .circle-large {
+        background-color: #E4FDE1;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      .work .leftside .circles .circle-large {
         position: absolute;
         border-radius: 50%;
         background-color: #028090;
@@ -417,8 +454,8 @@ body {
         width: 20vw;
         bottom: 50px;
         left: 0px;
-        animation: circle-animation 4.5s ease-in-out infinite; }
-      .work .leftside .circles-animation .circle2 {
+        animation-duration: 4.5s; }
+      .work .leftside .circles .circle-small {
         position: absolute;
         border-radius: 50%;
         background-color: #F45B69;
@@ -426,8 +463,9 @@ body {
         width: 10vw;
         bottom: 5vh;
         left: 400px;
-        animation: circle-animation 3s ease-in-out infinite .5s; }
-      .work .leftside .circles-animation .circle3 {
+        animation-duration: 3s;
+        animation-delay: .5s; }
+      .work .leftside .circles .circle-medium {
         position: absolute;
         border-radius: 50%;
         background-color: #E4FDE1;
@@ -435,7 +473,8 @@ body {
         width: 15vw;
         bottom: 18vh;
         left: 600px;
-        animation: circle-animation 4s ease-in-out infinite 1s; }
+        animation-duration: 4s;
+        animation-delay: 1s; }
   @media (max-width: 880px) {
     .work {
       flex-direction: column-reverse; }
@@ -686,30 +725,44 @@ footer {
         transition: all .3s ease; }
         footer .lower-side .menu-footer a:hover {
           opacity: .6; }
-    footer .lower-side .circulos {
+    footer .lower-side .circles {
       position: relative;
       width: calc(100vw / 3); }
-      footer .lower-side .circulos .circulo {
+      footer .lower-side .circles .circle-small {
+        background-color: #456990;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      footer .lower-side .circles .circle-medium {
+        background-color: #028090;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      footer .lower-side .circles .circle-large {
+        background-color: #E4FDE1;
+        animation-name: circle-animation;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+      footer .lower-side .circles .circle {
         position: absolute;
         border-radius: 50%;
         width: 300px;
         height: 300px;
         background-blend-mode: multiply; }
-        footer .lower-side .circulos .circulo:nth-of-type(1) {
-          background-color: #E4FDE1;
+        footer .lower-side .circles .circle.circle-large {
           width: 460px;
           height: 460px;
-          animation: circle-animation 3s ease-in-out infinite .5s; }
-        footer .lower-side .circulos .circulo:nth-of-type(2) {
-          background-color: #028090;
+          animation-duration: 3s;
+          animation-delay: .5s; }
+        footer .lower-side .circles .circle.circle-medium {
           top: -10vh;
           right: 0;
-          animation: circle-animation 4.5s ease-in-out infinite; }
-        footer .lower-side .circulos .circulo:nth-of-type(3) {
-          background-color: #456990;
+          animation-duration: 4.5s; }
+        footer .lower-side .circles .circle.circle-small {
           top: 30vh;
           left: -5vw;
-          animation: circle-animation 5s ease-in-out infinite .2s; }
+          animation-duration: 5s;
+          animation-delay: .2s; }
   @media (max-width: 880px) {
     footer {
       padding-top: 10vh; }
