@@ -26,7 +26,7 @@ body {
     text-transform: uppercase; }
   body h3 {
     font-size: 64px;
-    line-height: 64px;
+    line-height: 1;
     color: #E4FDE1;
     text-transform: uppercase;
     font-weight: 400; }
@@ -39,12 +39,6 @@ body {
     display: none; }
   body section h3 {
     text-align: center; }
-    body section h3::after {
-      content: "";
-      display: block;
-      border-bottom: 2px solid #E4FDE1;
-      width: 600px;
-      margin-top: 50px; }
   body section p {
     font-size: 1.3rem;
     display: block;
@@ -259,38 +253,50 @@ body {
   display: flex;
   justify-content: center; }
   .about-us .leftside {
+    position: relative;
     display: flex;
     height: 100vh;
-    width: 35vw;
+    width: 50vw;
     justify-content: right;
     align-items: center; }
     .about-us .leftside h3 {
-      transform: rotate(-90deg);
-      margin-left: 150px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      text-align: left;
+      font-size: 9rem;
+      font-weight: 700;
+      margin: 0 0 2vw 2vw;
       box-sizing: border-box; }
   .about-us .rightside {
-    width: 65vw;
+    width: 50vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px;
-    box-sizing: border-box; }
+    padding: 0;
+    height: 80vh;
+    margin-top: 10vh;
+    box-sizing: border-box;
+    border-left: 3px solid #E4FDE1; }
     .about-us .rightside .text {
-      color: #E4FDE1;
-      font-size: 3rem; }
-    .about-us .rightside .cta {
-      background: #E4FDE1;
-      color: black;
+      font-size: 3rem;
+      text-align: left;
       text-transform: uppercase;
-      margin: 0;
-      width: 140px; }
-      .about-us .rightside .cta:hover {
-        background: #456990; }
+      font-weight: 700; }
+  .about-us.about-us2 .leftside {
+    justify-content: left;
+    padding-left: 2vw; }
+    .about-us.about-us2 .leftside .text {
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 5rem;
+      line-height: 1; }
   .about-us.about-us2 .rightside {
     position: relative;
     display: block;
-    padding: 0; }
+    padding: 0;
+    border: none; }
     .about-us.about-us2 .rightside .photo {
       width: 45vh;
       height: 45vh;
@@ -328,13 +334,13 @@ body {
         text-decoration: none; }
       .about-us.about-us2 .rightside .photo.photo1 {
         background-color: #E4FDE1;
-        bottom: 42vh;
-        right: 40vw;
+        bottom: 32vh;
+        right: 12vw;
         z-index: 10; }
       .about-us.about-us2 .rightside .photo.photo2 {
         background-color: #456990;
-        bottom: 10vh;
-        right: 20vw;
+        bottom: -5vh;
+        right: 30vw;
         z-index: 11; }
         .about-us.about-us2 .rightside .photo.photo2 img {
           transform: translateY(-50px); }

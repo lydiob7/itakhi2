@@ -7,45 +7,57 @@
     display: flex;
     justify-content: center;
     .leftside{
+        position: relative;
         display: flex;
         height: 100vh;
-        width: 35vw;
+        width: 50vw;
         justify-content: right;
         align-items: center;   
         h3{
-            transform: rotate(-90deg) ;
-            margin-left: 150px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: left;
+            font-size: 9rem;
+            font-weight: 700;
+            margin: 0 0 2vw 2vw;
             box-sizing: border-box;            
         }     
     } 
     .rightside{
-        width: 65vw;
+        width: 50vw;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 100px;
+        padding: 0;
+        height: 80vh;
+        margin-top: 10vh;
         box-sizing: border-box;
+        border-left: 3px solid $yellow;
         .text{
-            color: $yellow;
             font-size: 3rem;
-        }
-        .cta{
-            background: $yellow;
-            color: black;
+            text-align: left;
             text-transform: uppercase;
-            margin: 0;
-            width: 140px;
-            &:hover{
-                background:$purple;
-            }
+            font-weight: 700;
         }
     }  
     &.about-us2 {
+        .leftside {
+            justify-content: left;
+            padding-left: 2vw;
+            .text {
+                text-transform: uppercase;
+                text-align: left;
+                font-size: 5rem;
+                line-height: 1;
+            }
+        }
         .rightside{
             position: relative;
             display: block;
             padding: 0;
+            border: none;
             .photo {
                 width: 45vh;
                 height: 45vh;
@@ -88,14 +100,14 @@
                 }
                 &.photo1 {
                     background-color: $yellow;
-                    bottom: 42vh;
-                    right: 40vw;
+                    bottom: 32vh;
+                    right: 12vw;
                     z-index: 10;
                 }
                 &.photo2 {
                     background-color: $purple;
-                    bottom: 10vh;
-                    right: 20vw;
+                    bottom: -5vh;
+                    right: 30vw;
                     z-index: 11;
                     img {
                         transform: translateY(-50px);
