@@ -40,9 +40,8 @@ body {
   body section h3 {
     text-align: center; }
   body section p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: block;
-    width: 70%;
     text-align: justify; }
   body .outter-wrapper {
     transform: rotate(-90deg) translateX(-100vh);
@@ -104,13 +103,13 @@ body {
 @keyframes circle-animation {
   0% {
     transform: scale(1);
-    opacity: .3; }
+    opacity: .8; }
   50% {
     transform: scale(0.8);
-    opacity: .15; }
+    opacity: .3; }
   100% {
     transform: scale(1);
-    opacity: .3; } }
+    opacity: .8; } }
 
 /* Nav */
 #nav {
@@ -283,7 +282,8 @@ body {
       font-size: 3rem;
       text-align: left;
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      padding: 0 15%; }
   .about-us.about-us2 .leftside {
     justify-content: left;
     padding-left: 2vw; }
@@ -291,7 +291,8 @@ body {
       text-transform: uppercase;
       text-align: left;
       font-size: 5rem;
-      line-height: 1; }
+      line-height: 1;
+      padding: 0 15%; }
   .about-us.about-us2 .rightside {
     position: relative;
     display: block;
@@ -413,45 +414,81 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center; }
-  .work .rightside h3 {
-    transform: rotate(90deg);
-    margin-right: 150px;
-    margin-top: 45vh;
-    width: 35vw;
-    box-sizing: border-box; }
-    .work .rightside h3::after {
-      margin-left: -10vh; }
+  .work .rightside {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .work .rightside h3 {
+      position: relative;
+      transform: rotate(90deg);
+      transform-origin: center;
+      width: 35vw;
+      font-size: 9rem;
+      font-weight: 700;
+      box-sizing: border-box; }
+      .work .rightside h3::after {
+        content: '';
+        position: absolute;
+        bottom: -3vw;
+        left: -5vh;
+        width: 80vh;
+        border: 1px solid #E4FDE1; }
   .work .leftside {
     width: 65vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 100px 0 100px;
+    padding: 200px 100px 0 100px;
     box-sizing: border-box; }
     .work .leftside .text {
       height: 60vh;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      font-size: 1.5rem; }
     .work .leftside .circles {
       position: relative;
       width: 100%;
       height: 40vh;
       box-sizing: border-box; }
       .work .leftside .circles .circle-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         background-color: #456990;
         animation-name: circle-animation;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite; }
+        .work .leftside .circles .circle-small a {
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          text-align: center; }
       .work .leftside .circles .circle-medium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         background-color: #028090;
         animation-name: circle-animation;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite; }
+        .work .leftside .circles .circle-medium a {
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          text-align: center; }
       .work .leftside .circles .circle-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         background-color: #E4FDE1;
         animation-name: circle-animation;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite; }
+        .work .leftside .circles .circle-large a {
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          text-align: center; }
       .work .leftside .circles .circle-large {
         position: absolute;
         border-radius: 50%;
@@ -598,6 +635,7 @@ body {
         .work-together .right-side > div.rotate p {
           display: block;
           font-size: .8rem;
+          padding: 0 15%;
           transform: rotateY(-180deg); }
   @media (max-width: 1200px) {
     .work-together .right-side > div.rotate {

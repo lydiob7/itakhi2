@@ -31,12 +31,12 @@
 @keyframes circle-animation {
     0% {
         transform: scale(1);
-        opacity: .3;
+        opacity: .8;
     } 50% {
         transform: scale(.8);
-        opacity: .15;
+        opacity: .3;
     } 100% {
         transform: scale(1);
-        opacity: .3;
+        opacity: .8;
     }
 }

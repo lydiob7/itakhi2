@@ -7,14 +7,24 @@
     display: flex;
     justify-content: center;
     .rightside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         h3 {
+            position: relative;
             transform: rotate(90deg) ;
-            margin-right: 150px;
-            margin-top: 45vh;
+            transform-origin: center;
             width: 35vw;
+            font-size: 9rem;
+            font-weight: 700;
             box-sizing: border-box;
             &::after {
-                margin-left: -10vh;
+                content: '';
+                position: absolute;
+                bottom: -3vw;
+                left: -5vh;
+                width: 80vh;
+                border: 1px solid $yellow;
             }
         }
     }
@@ -24,11 +34,12 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 100px 100px 0 100px;
+        padding: 200px 100px 0 100px;
         box-sizing: border-box;
         .text {
             height: 60vh;
             box-sizing: border-box;
+            font-size: 1.5rem;
         }
         .circles {
             position: relative;
@@ -37,10 +48,19 @@
             box-sizing: border-box;
             @each $size, $color in $circles {
                 .circle-#{$size} {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
                     background-color: $color;
                     animation-name: circle-animation;
                     animation-timing-function: ease-in-out;
                     animation-iteration-count: infinite;
+                    a {
+                        text-transform: uppercase;
+                        font-size: 1.7rem;
+                        text-align: center;
+                    }
                 }
             }
             .circle-large {
