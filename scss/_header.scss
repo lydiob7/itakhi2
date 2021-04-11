@@ -41,26 +41,27 @@
         &:before {
             content: '';
             position: absolute;
-            top: 5vh;
-            left: -45vh;
+            transform-origin: center center;
+            transform: translate(-22vw, 5vh);
             z-index: 2;
             background-color: $purple;
-            height: 90vh;
-            width: 90vh;
+            height: 44vw;
+            width: 44vw;
             border-radius: 50%;
         }
     }
     @media (max-width: 600px) {
         .welcome {
-            .itakhi, .digital, .taller {
-                font-size: 48px;
+            bottom: 20vh;
+            .title {
+                font-size: 4rem;
             }
-            .taller {
-                margin-left: 45px;
+            h2 {
+                font-size: 2.4rem;
             }
-            .itakhi {
-                margin: 15vh 0;
-            }
+        }
+        .bg-right-side:before {
+            transform: translate(-22vw, 25vh);
         }
     }
 }

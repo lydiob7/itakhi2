@@ -91,7 +91,7 @@ footer{
             }
         }
     }
-    @media (max-width: 880px) {
+    @media (max-width: 660px) {
         padding-top: 10vh;
         .upper-side {
             .description {
@@ -101,12 +101,22 @@ footer{
                 font-size: 1rem;
             }
         }
-        .redes-sociales {
-            font-size: 1rem;
-        }
-        .menu-footer {
-            font-size: 2rem;
-            transform: translateY(23vw) rotate(-90deg);
+        .lower-side {
+            .redes-sociales {
+                width: 50vw;
+                font-size: 1rem;
+            }
+            .circles {
+                display: none;
+            }
+            .menu-footer {
+                display: flex;
+                align-items: flex-end;
+                width: 50vw;
+                height: auto;
+                font-size: 2rem;
+                transform: translate(0) rotate(0);
+            }
         }
     }
 }

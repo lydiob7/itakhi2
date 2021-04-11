@@ -37,7 +37,7 @@
             font-family: "Josefin Sans", sans-serif;
         }
         input:focus, textarea:focus, input:active, textarea:active{
-            border: none;
+            outline: none;
         }
         .submit-btn{
             background: $yellow;
@@ -56,8 +56,10 @@
         h5 {
             font-size: 1.2rem;
         }
-        input::placeholder,textarea::placeholder, input,textarea {
-            font-size: 1rem;
+        .form {
+            input::placeholder,textarea::placeholder, input,textarea {
+                font-size: 1.2rem;
+            }
         }
     }
 }
